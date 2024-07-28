@@ -1,0 +1,159 @@
+// style
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+.site-header {
+  position: relative;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.site-footer {
+  position: relative;
+  padding: 20px;
+  background-color: #bbbbaa;
+  font-size: 12px;
+}
+
+.content-container {
+  position: relative;
+  padding: 20px;
+  background-color: snow;
+  overflow: auto;
+}
+
+.form {
+  position: relative;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid black;
+
+      &:focus {
+        outline: 2px solid black;
+      }
+    }
+  }
+
+  .form-actions {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+    align-self: center;
+
+    button {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #333;
+      }
+      &:active {
+        background-color: #666;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .text-red {
+    color: red;
+  }
+}
+
+.data-table {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  
+  @media only screen and (max-width: 440px) {
+    flex-direction: column;
+  }
+
+  .data-table-block {
+    border: 1px solid black;
+    display: flex;
+
+    @media only screen and (max-width: 440px) {
+      flex-direction: column;
+      min-width: 100%;
+    }
+
+    .property {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .value {
+      text-align: right;
+    }
+
+    .property,
+    .value {
+      padding: 10px;
+      border: 1px solid black;
+
+      @media only screen and (max-width: 440px) {
+        text-align: center;
+      }
+    }
+  }
+}

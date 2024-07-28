@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/functions.js"></script>
+  </head>
+  <body>
+    <header class="site-header">Weeks Calculator</header>
+
+    <div class="content-container">
+      <form class="form" autocomplete="off">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="date1">
+              <span>First Date: </span>
+              <span class="text-red">*</span></label
+            >
+            <input type="date" name="date1" id="date1" />
+          </div>
+
+          <div class="form-field">
+            <label for="date2">
+              <span>Second Date: </span>
+              <span class="text-red">*</span>
+            </label>
+            <input type="date" name="date2" id="date2" />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+          </div>
+        </div>
+      </form>
+
+      <hr />
+
+      <div class="data-table">
+        <div class="data-table-block">
+          <div class="property">Days</div>
+          <div class="value" id="days">[days]</div>
+        </div>
+        <div class="data-table-block">
+          <div class="property">Weeks</div>
+          <div class="value" id="weeks">[weeks]</div>
+        </div>
+        <div class="data-table-block">
+          <div class="property">Weeks (Rounded)</div>
+          <div class="value" id="weeksRounded">[weeksRounded]</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      Copyright &copy; NewCodes 2024. All Rights Reserved.
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

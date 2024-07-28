@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+.site-header {
+  position: relative;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.site-footer {
+  position: relative;
+  padding: 20px;
+  background-color: #bbbbaa;
+  font-size: 12px;
+}
+
+.content-container {
+  position: relative;
+  padding: 20px;
+  background-color: snow;
+  overflow: auto;
+}
+
+.form {
+  position: relative;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.form .form-field label {
+  font-weight: bold;
+}
+.form .form-field input[type=date] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.form .form-field input[type=date]:focus {
+  outline: 2px solid black;
+}
+.form .form-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-self: center;
+  align-self: center;
+}
+.form .form-actions button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+.form .form-actions button:hover {
+  background-color: #333;
+}
+.form .form-actions button:active {
+  background-color: #666;
+}
+.form .form-actions button:focus {
+  outline: none;
+}
+.form .text-red {
+  color: red;
+}
+
+.data-table {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 440px) {
+  .data-table {
+    flex-direction: column;
+  }
+}
+.data-table .data-table-block {
+  border: 1px solid black;
+  display: flex;
+}
+@media only screen and (max-width: 440px) {
+  .data-table .data-table-block {
+    flex-direction: column;
+    min-width: 100%;
+  }
+}
+.data-table .data-table-block .property {
+  font-weight: bold;
+  text-align: left;
+}
+.data-table .data-table-block .value {
+  text-align: right;
+}
+.data-table .data-table-block .property,
+.data-table .data-table-block .value {
+  padding: 10px;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 440px) {
+  .data-table .data-table-block .property,
+  .data-table .data-table-block .value {
+    text-align: center;
+  }
+}
